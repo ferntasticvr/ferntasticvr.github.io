@@ -1,3 +1,110 @@
+html, body {  
+  margin: 0;  
+  padding: 0;  
+} 
+
+:root {
+    --color-bg: #0f110f;
+    
+    --color-text: #c5cdbf;
+    --color-text-alt: #c5dfbf;
+    --color-text-muted: #7c8376;
+
+    --color-primary: #95DD84;
+    --color-primary-text: #b5dda4;
+    --color-primary-rgb: 149,221,132; /* opacity support w/ rgb instead of hex (???) */
+
+    --color-secondary: #4fc15f;
+    --color-secondary-rgb: 79,193,95;
+
+    box-sizing: border-box;
+}
+
 html {
-    font-family: sans-serif;
+    font-family: var(--font-funnel-sans), sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+
+.title {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-size: 10vh;
+    color: var(--color-primary-text)
+}
+
+.content-holder {
+    justify-content: center;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 35dvh;
+    padding-bottom: 2vh;
+}
+
+details {
+    width: 40vw;
+    box-sizing: border-box;
+    margin-bottom: 1.5vh;
+}
+
+@media (max-width: 700px) {
+    details {
+        width: 80vw;
+    }
+}
+
+summary {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    text-align: left;
+    color: var(--color-text-alt);
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::before {
+    content: "+";
+    color: var(--color-text-muted);
+    flex-shrink: 0;
+    width: 1ch;
+    text-align: center;
+}
+
+details[open] summary::before {
+    content: "-";
+}
+
+/* ugly syntax, css...*/
+details[open] > :not(summary) {
+    color: var(--color-text);
+    padding-left: 4vh;
+    margin: 1vh 0 0;
+}
+
+@media (max-width: 700px) {
+    details[open] > :not(summary) {
+        padding-left: 2vh;
+    }
+}
+
+a {
+    color: var(--color-primary);
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: rgba(var(--color-primary-rgb),0.35);
+}
+
+a:visited {
+    color: var(--color-secondary);
+    text-decoration-color: rgba(var(--color-secondary-rgb,0.35))
 }
