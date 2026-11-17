@@ -90,7 +90,7 @@ summary::before {
     text-align: center;
 }
 
-details[open] summary::before {
+details[open] > summary::before {
     content: "-";
 }
 
@@ -117,4 +117,9 @@ a {
 a:visited {
     color: var(--color-secondary);
     text-decoration-color: rgba(var(--color-secondary-rgb,0.35))
+}
+
+li {
+    padding: 0;
+    margin: 2vh
 }
