@@ -1,9 +1,12 @@
 ---
+import { Font } from "astro:assets";
 import "../styles/global.css";
+
 const { title = "ferntastic" } = Astro.props;
 ---
 <html lang="en">
 	<head>
+		<Font cssVariable="--font-funnel-sans" preload />
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
