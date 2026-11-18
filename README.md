@@ -4,6 +4,8 @@ a really bad personal site!
 
 this project was made with [astro](https://astro.build) and [deno](https://deno.com)
 
+see it running on [github pages](https://ferntasticvr.github.io)!
+
 ## running it
 
 prerequisites:
