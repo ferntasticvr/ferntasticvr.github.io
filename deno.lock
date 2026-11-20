@@ -1,6 +1,7 @@
 {
   "version": "5",
   "specifiers": {
+    "npm:@deno/astro-adapter@0.6": "0.6.0_astro@7.4.12",
     "npm:astro@^7.4.12": "7.4.12"
   },
   "npm": {
@@ -238,6 +239,12 @@
         "fast-string-width",
         "fast-wrap-ansi",
         "sisteransi"
+      ]
+    },
+    "@deno/astro-adapter@0.6.0_astro@7.4.12": {
+      "integrity": "sha512-zltNm5I7MME7Udb5TtAGIfLrfOHiuDG1FrKWDqYbFQ+AurmwxHvfwVCca4f+jfGQY3DnwYLDvb0tnmeI8aUWfg==",
+      "dependencies": [
+        "astro"
       ]
     },
     "@emnapi/core@1.11.1": {
@@ -1585,6 +1592,7 @@
   "workspace": {
     "packageJson": {
       "dependencies": [
+        "npm:@deno/astro-adapter@0.6",
         "npm:astro@^7.4.12"
       ]
     }
