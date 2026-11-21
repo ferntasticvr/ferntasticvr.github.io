@@ -1,4 +1,4 @@
-FROM denoland/deno:alpine AS build
+FROM denoland/deno:latest AS build
 
 WORKDIR /app
 
@@ -9,7 +9,7 @@ RUN deno task build
 
 
 
-FROM denoland/deno:alpine
+FROM denoland/deno:latest
 
 WORKDIR /app
 
